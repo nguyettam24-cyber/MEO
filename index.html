@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Bắn Súng - Chơi Ngay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Màn hình bắt đầu -->
+        <div id="startScreen" class="overlay">
+            <h1>BẮN SÚNG</h1>
+            <p>Di chuyển: ← ↑ ↓ → hoặc W A S D</p>
+            <p>Bắn: Phím cách (SPACE) hoặc nhấn chuột</p>
+            <button id="startBtn">Bắt Đầu Chơi</button>
+        </div>
+
+        <!-- Màn hình Game Over -->
+        <div id="gameOverScreen" class="overlay hidden">
+            <h1 style="color:#ff4444;">GAME OVER</h1>
+            <p id="finalScore">Điểm: 0</p>
+            <p id="highScore">Cao nhất: 0</p>
+            <button id="restartBtn">Chơi Lại</button>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud" class="hidden">
+            <div class="hud-item">Điểm: <span id="score">0</span></div>
+            <div class="hud-item">Mạng: <span id="lives">3</span></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
